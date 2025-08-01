@@ -122,13 +122,4 @@ You'll see either ✅ Legit or ❌ Fake.
 
 ---
 
-## 🧑‍💻 Author
 
-**Deepakprasath M**  
-[GitHub](https://github.com/Deepakprasath10) | [LinkedIn](https://www.linkedin.com/in/deepakprasath-m-6b42b935b)
-
----
-
-## 📜 License
-
-This project is open-source and free to use under the [MIT License](LICENSE).
