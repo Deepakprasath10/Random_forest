@@ -1,0 +1,34 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Job Posting Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Fake Job Posting Detector</h2>
+    <form action="/predict" method="post">
+        <input type="text" name="title" placeholder="Job Title"><br>
+        <input type="text" name="location" placeholder="Location"><br>
+        <input type="text" name="department" placeholder="Department"><br>
+        <input type="text" name="salary_range" placeholder="Salary Range"><br>
+        <input type="text" name="company_profile" placeholder="Company Profile"><br>
+        <input type="text" name="description" placeholder="Description"><br>
+        <input type="text" name="requirements" placeholder="Requirements"><br>
+        <input type="text" name="benefits" placeholder="Benefits"><br>
+        <input type="number" name="telecommuting" placeholder="Telecommuting (0 or 1)" min="0" max="1"><br>
+        <input type="number" name="has_company_logo" placeholder="Has Company Logo (0 or 1)" min="0" max="1"><br>
+        <input type="number" name="has_questions" placeholder="Has Questions (0 or 1)" min="0" max="1"><br>
+        <input type="text" name="employment_type" placeholder="Employment Type"><br>
+        <input type="text" name="required_experience" placeholder="Experience"><br>
+        <input type="text" name="required_education" placeholder="Education"><br>
+        <input type="text" name="industry" placeholder="Industry"><br>
+        <input type="text" name="function" placeholder="Function"><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction Result: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
