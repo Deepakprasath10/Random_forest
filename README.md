@@ -1,74 +1,79 @@
 
 # 🧪 Fake Job Posting Detector
-=======
-# Random_forest
-# Fake Job Posting Detector
 
-
-A simple machine learning-based web application that predicts whether a job posting is **legit or fake**, using a **Random Forest Classifier**, built with **Flask**.
+A machine learning web application that predicts whether a job posting is **legitimate or fake** using a **Random Forest Classifier**, built with **Flask**.
 
 ---
 
-<<<<<<< HEAD
 ## 🚀 Features
-=======
-##  Features
 
-- Detects fake job listings using input features like title, description, logo, and more
-- Intuitive and responsive user interface
-- Built using Python and Flask
-- Trained using a Random Forest Classifier
-- Model trained on job postings dataset with labeled fake and real jobs
+- 🔍 Detects fake job listings based on textual input
+- 🧠 Trained on labeled dataset using Random Forest Classifier
+- 🌐 Flask-based responsive web interface
+- 📂 Supports manual model retraining
+- 🎨 Custom UI with CSS
 
 ---
 
+## 📦 Project Structure
 
-## ✅ Prerequisites
-=======
-##  Prerequisites
-
-Make sure you have the following installed:
-
-- Python 3.7 or higher
-- pip (Python package manager)
+```
+fake-job-detector/
+├── app.py                # Main Flask web application
+├── model_train.py        # Script to train and save the ML model
+├── job_model.pkl         # Pre-trained Random Forest model
+├── requirements.txt      # Python dependencies
+├── static/
+│   └── style.css         # Custom styles
+├── templates/
+│   ├── index.html        # Form page for job details
+│   └── result.html       # Prediction output page
+└── README.md             # Project documentation
+```
 
 ---
 
-## 🔧 Installation
+## ✅ Requirements
+
+- Python 3.7+
+- pip (Python package installer)
+
+---
+
+## 🔧 Installation & Setup
 
 ### 1. Clone the Repository
 
-```
+```bash
 git clone https://github.com/yourusername/fake-job-detector.git
 cd fake-job-detector
-<<<<<<< HEAD
 ```
 
 ### 2. Install Dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
 ### 3. Train the Model (Optional)
 
-A pre-trained model (`job_model.pkl`) is already included. If you want to retrain the model:
+> Note: A pre-trained model `job_model.pkl` is already included. You can retrain if needed.
 
-```
+```bash
 python model_train.py
 ```
 
 ---
 
-## 🚦 Running the Application
+## 🚦 Running the App
 
 Start the Flask development server:
 
-```
+```bash
 python app.py
 ```
 
-Then open your browser and go to:
+Then open your browser and visit:
 
 ```
 http://localhost:5000
@@ -78,87 +83,52 @@ http://localhost:5000
 
 ## ⚙️ How It Works
 
-The app uses a **Random Forest Classifier** trained on a dataset of job listings.
-
-When a user fills in the job details like title, description, location, etc.:
-
-- The model processes the input and makes a binary classification.
-- The prediction is shown as:
-
-> ✅ Legit Job Posting  
-> ❌ Fake Job Posting
+1. User fills out job posting form (title, description, etc.)
+2. Input is vectorized and passed to the pre-trained model
+3. Model returns a binary prediction:
+   - ✅ **Legit Job Posting**
+   - ❌ **Fake Job Posting**
 
 ---
 
-## 📁 File Structure
+## 🧪 Model Info
 
-```
-=======
-2. Install Dependencies
-
-pip install -r requirements.txt
-3. Train the Model (Optional)
-A pre-trained model (job_model.pkl) is already included. If you want to retrain the model:
-
-
-python model_train.py
-🚦 Running the Application
-Start the Flask development server:
-
-
-python app.py
-Then open your browser and go to:
-
-
-http://localhost:5000
-⚙️ How It Works
-The app uses a Random Forest Classifier trained on a dataset of job listings.
-
-When a user fills in the job details like title, description, location, etc.:
-
-The model processes the input and makes a binary classification.
-
-The prediction is shown as:
-✅ Legit Job Posting or ❌ Fake Job Posting
-
-📁 File Structure
-
->>>>>>> 986237ba31675bb110d341f79377308bd472e781
-fake-job-detector/
-├── app.py                # Flask application
-├── model_train.py        # ML model training script
-├── job_model.pkl         # Pre-trained RandomForest model
-├── static/
-│   └── style.css         # Custom styles for the web app
-├── templates/
-│   ├── index.html        # Form input page
-│   └── result.html       # Prediction output page
-├── requirements.txt      # Python dependencies
-└── README.md             # This documentation
-
-```
+- **Algorithm**: Random Forest Classifier
+- **Trained On**: Job listings dataset with real and fake labels
+- **Feature Engineering**: Basic NLP and label encoding (example: 'has_logo' as 0/1)
 
 ---
 
-## 🪄 Future Improvements
+## 🖼️ How to Use
 
-- Integrate NLP techniques for deeper text analysis
-- Add more metadata fields for better accuracy
-- Deploy online using platforms like Heroku, Render, or AWS
-- Add input validations and pre-processing feedback
+### Step 1: Upload Job Info
+Fill in the job title, description, etc.
 
----
+### Step 2: Click Predict
+The model will process the form and give a result.
 
-## 📸 Step-by-Step Guide: How to Use the Fake Job Detector
-
-### Step 1: Input Form  
-Fill out the form fields like job title, description, logo flag, etc.
-
-### Step 2: Submit  
-Click the **Predict** button to get the result.
-
-### Step 3: Prediction Result  
-See whether the job is legit ✅ or fake ❌.
+### Step 3: View Result
+You'll see either ✅ Legit or ❌ Fake.
 
 ---
 
+## 💡 Future Enhancements
+
+- Use advanced NLP (TF-IDF, word embeddings)
+- Add live data scraping and evaluation
+- Deploy to cloud (Render, Heroku, AWS, etc.)
+- Add user login/authentication
+- Display prediction confidence scores
+
+---
+
+## 🧑‍💻 Author
+
+**Deepakprasath M**  
+[GitHub](https://github.com/Deepakprasath10) | [LinkedIn](https://www.linkedin.com/in/deepakprasath-m-6b42b935b)
+
+---
+
+## 📜 License
+
+This project is open-source and free to use under the [MIT License](LICENSE).
