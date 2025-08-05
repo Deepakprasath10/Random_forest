@@ -40,7 +40,7 @@ fake-job-detector/
 
 ---
 
-## 🔧 Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the Repository
 
@@ -112,7 +112,7 @@ The model will process the form and give a result.
 
 
 ### Step 3: View Result
-You'll see either ✅ Legit or ❌ Fake.
+You'll see either  Legit or  Fake.
 <img width="1454" height="947" alt="Screenshot 2025-08-01 101457" src="https://github.com/user-attachments/assets/2b0f2392-c7d0-4837-b011-4c4ac2d2df5b" />
 
 
